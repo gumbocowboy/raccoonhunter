@@ -10,8 +10,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-        if message.author.global_name == key.raccoon_name:
-              await message.reply(content=key.to_send)
+            
+            if message.author.id == key.raccoon_name:
               print(f'Did it')
+              
+              await message.reply(content=key.to_send)
     # print(message.author.id)
 client.run(key.bot_token)
